@@ -1,5 +1,5 @@
 /* include fig01 */
-#include	"unp.h"
+#include	"../lib/unp.h"
 #include	<limits.h>		/* for OPEN_MAX */
 
 int

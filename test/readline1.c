@@ -1,5 +1,5 @@
 /* include readline */
-#include	"unp.h"
+#include	"../lib/unp.h"
 
 /* PAINFULLY SLOW VERSION -- example only */
 ssize_t
