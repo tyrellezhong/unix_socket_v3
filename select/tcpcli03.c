@@ -1,5 +1,5 @@
 /* Test shutdown(fd,SHUT_RD) and see what happens */
-#include	"unp.h"
+#include	"../lib/unp.h"
 
 int
 main(int argc, char **argv)
@@ -14,7 +14,7 @@ main(int argc, char **argv)
 
 	bzero(&servaddr, sizeof(servaddr));
 	servaddr.sin_family = AF_INET;
-	servaddr.sin_port = htons(19);		/* chargen server */
+	servaddr.sin_port = htons(SERV_PORT);		/* chargen server */
 	Inet_pton(AF_INET, argv[1], &servaddr.sin_addr);
 
 	Connect(sockfd, (SA *) &servaddr, sizeof(servaddr));

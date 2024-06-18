@@ -1,6 +1,6 @@
 /* include checkopts1 */
 /* *INDENT-OFF* */
-#include	"unp.h"
+#include	"../lib/unp.h"
 #include	<netinet/tcp.h>		/* for TCP_xxx defines */
 
 union val {

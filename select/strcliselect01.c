@@ -1,4 +1,4 @@
-#include	"unp.h"
+#include	"../lib/unp.h"
 
 void
 str_cli(FILE *fp, int sockfd)
@@ -24,6 +24,8 @@ str_cli(FILE *fp, int sockfd)
 			if (Fgets(sendline, MAXLINE, fp) == NULL)
 				return;		/* all done */
 			Writen(sockfd, sendline, strlen(sendline));
+            char* tmpstr = "111222333";
+			Writen(sockfd, tmpstr, strlen(tmpstr));
 		}
 	}
 }

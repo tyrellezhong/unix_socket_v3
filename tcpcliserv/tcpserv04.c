@@ -1,3 +1,4 @@
+#include <sys/socket.h>
 #include	"../lib/unp.h"
 
 int
@@ -24,13 +25,18 @@ main(int argc, char **argv)
 
 	for ( ; ; ) {
 		clilen = sizeof(cliaddr);
+        struct sockaddr_in local;
+        socklen_t len = sizeof(local);
 		if ( (connfd = accept(listenfd, (SA *) &cliaddr, &clilen)) < 0) {
 			if (errno == EINTR)
 				continue;		/* back to for() */
 			else
 				err_sys("accept error");
 		}
-        
+        getsockname(connfd, (SA*)(&local), &len);
+        char name[65535];
+        printf("listenfd:%d connfd=%d ip:%s port:%d \n",listenfd, connfd, inet_ntop(AF_INET, &local.sin_addr, name, sizeof(name)), ntohs(local.sin_port));
+
 		if ( (childpid = Fork()) == 0) {	/* child process */
 			Close(listenfd);	/* close listening socket */
 			str_echo(connfd);	/* process the request */
