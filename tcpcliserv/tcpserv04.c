@@ -1,6 +1,7 @@
 #include <sys/socket.h>
 #include	"../lib/unp.h"
 
+// 基本可用
 int
 main(int argc, char **argv)
 {

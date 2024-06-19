@@ -1,5 +1,6 @@
 #include	"../lib/unp.h"
 
+// 不能处理信号，listen时会被中断，产生僵尸进程
 int
 main(int argc, char **argv)
 {

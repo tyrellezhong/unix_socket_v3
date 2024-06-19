@@ -9,6 +9,7 @@ main(int argc, char **argv)
 	if (argc != 2)
 		err_quit("usage: tcpcli <IPaddress>");
 
+    // 模拟产生僵尸进程
 	for (i = 0; i < 5; i++) {
 		sockfd[i] = Socket(AF_INET, SOCK_STREAM, 0);
 
