@@ -1,4 +1,4 @@
-#include	"unp.h"
+#include	"../lib/unp.h"
 
 #define	NDG		2000	/* datagrams to send */
 #define	DGLEN	1400	/* length of each datagram */
