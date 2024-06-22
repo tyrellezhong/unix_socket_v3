@@ -8,10 +8,9 @@
             "name": "(gdb) Launch",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/build/myexe",
-            "args": [],
-            "stopAtEntry": false,
-            "cwd": "${workspaceFolder}/build",
+            "program": "${workspaceFolder}/names/build/daytimetcpsrv1",
+            "stopAtEntry": true,
+            "cwd": "${workspaceFolder}/names/build",
             "environment": [],
             "externalConsole": false,
             "MIMode": "gdb",
@@ -27,7 +26,11 @@
                     "ignoreFailures": true
                 }
             ],
-            "preLaunchTask": "Build",//使用tasks.json中的哪个label生成可执行文件
+            "args": [
+                "9877"
+            ],
+            
+            // "preLaunchTask": "Build",//使用tasks.json中的哪个label生成可执行文件
             "miDebuggerPath": "/usr/bin/gdb"
         }
 
