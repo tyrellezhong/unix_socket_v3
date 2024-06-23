@@ -1,4 +1,4 @@
-#include	"unp.h"
+#include	"../lib/unp.h"
 
 void
 str_cli(FILE *fp, int sockfd)
@@ -6,6 +6,8 @@ str_cli(FILE *fp, int sockfd)
 	int			maxfdp1, stdineof = 0;
 	fd_set		rset;
 	char		sendline[MAXLINE], recvline[MAXLINE];
+
+    int count = 0;
 
 	FD_ZERO(&rset);
 	for ( ; ; ) {
@@ -25,16 +27,16 @@ str_cli(FILE *fp, int sockfd)
 
 			Fputs(recvline, stdout);
 		}
-
 		if (FD_ISSET(fileno(fp), &rset)) {  /* input is readable */
-			if (Fgets(sendline, MAXLINE, fp) == NULL) {
-				stdineof = 1;
-				Shutdown(sockfd, SHUT_WR);	/* send FIN */
-				FD_CLR(fileno(fp), &rset);
-				continue;
-			}
+			// if (Fgets(sendline, MAXLINE, fp) == NULL) {
+			// 	stdineof = 1;
+			// 	Shutdown(sockfd, SHUT_WR);	/* send FIN */
+			// 	FD_CLR(fileno(fp), &rset);
+			// 	continue;
+			// }
 
-			Writen(sockfd, sendline, strlen(sendline));
+			// Writen(sockfd, sendline, strlen(sendline));
+            printf("count = %d\n", ++count);
 		}
 	}
 }

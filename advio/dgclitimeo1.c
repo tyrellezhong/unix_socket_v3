@@ -1,4 +1,4 @@
-#include	"unp.h"
+#include	"../lib/unp.h"
 
 void
 dg_cli(FILE *fp, int sockfd, const SA *pservaddr, socklen_t servlen)
@@ -9,7 +9,7 @@ dg_cli(FILE *fp, int sockfd, const SA *pservaddr, socklen_t servlen)
 	while (Fgets(sendline, MAXLINE, fp) != NULL) {
 
 		Sendto(sockfd, sendline, strlen(sendline), 0, pservaddr, servlen);
-
+        // IO 超时：select 超时方式
 		if (Readable_timeo(sockfd, 5) == 0) {
 			fprintf(stderr, "socket timeout\n");
 		} else {

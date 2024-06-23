@@ -8,9 +8,9 @@
             "name": "(gdb) Launch",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/names/build/daytimetcpcli",
+            "program": "${workspaceFolder}/advio/build/tcpcli02",
             "stopAtEntry": true,
-            "cwd": "${workspaceFolder}/names/build",
+            "cwd": "${workspaceFolder}/advio/build",
             "environment": [],
             "externalConsole": false,
             "MIMode": "gdb",
@@ -27,8 +27,7 @@
                 }
             ],
             "args": [
-                "fe80::5054:ff:fe2c:43da",
-                "9877"
+                "127.0.0.1",
             ],
             
             // "preLaunchTask": "Build",//使用tasks.json中的哪个label生成可执行文件

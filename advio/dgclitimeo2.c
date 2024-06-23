@@ -1,4 +1,4 @@
-#include	"unp.h"
+#include	"../lib/unp.h"
 
 void
 dg_cli(FILE *fp, int sockfd, const SA *pservaddr, socklen_t servlen)
@@ -9,6 +9,7 @@ dg_cli(FILE *fp, int sockfd, const SA *pservaddr, socklen_t servlen)
 
 	tv.tv_sec = 5;
 	tv.tv_usec = 0;
+    // io超时：套接字选项超时方式
 	Setsockopt(sockfd, SOL_SOCKET, SO_RCVTIMEO, &tv, sizeof(tv));
 
 	while (Fgets(sendline, MAXLINE, fp) != NULL) {
