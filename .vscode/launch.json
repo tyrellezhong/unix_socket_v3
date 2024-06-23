@@ -8,7 +8,7 @@
             "name": "(gdb) Launch",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/names/build/daytimetcpsrv1",
+            "program": "${workspaceFolder}/names/build/daytimetcpcli",
             "stopAtEntry": true,
             "cwd": "${workspaceFolder}/names/build",
             "environment": [],
@@ -27,6 +27,7 @@
                 }
             ],
             "args": [
+                "fe80::5054:ff:fe2c:43da",
                 "9877"
             ],
             
