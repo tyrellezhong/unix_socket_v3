@@ -1,4 +1,4 @@
-#include	"unp.h"
+#include	"../lib/unp.h"
 #include	<sys/param.h>
 #include	<sys/ucred.h>
 
@@ -15,7 +15,7 @@ main()
 
 		/* must set the socket option on the *receiving* socket */
 	on = 1;
-	Setsockopt(fd[1], 0, LOCAL_CREDS, &on, sizeof(on));
+	// Setsockopt(fd[1], 0, LOCAL_CREDS, &on, sizeof(on));
 
 	Write(fd[0], "hello, world\n", 13);
 
@@ -32,7 +32,7 @@ main()
 	else {
 		printf("real user ID = %d\n", cred.fc_ruid);
 		printf("real group ID = %d\n", cred.fc_rgid);
-		printf("login name = %-*s\n", MAXLOGNAME, cred.fc_login);
+		// printf("login name = %-*s\n", MAXLOGNAME, cred.fc_login);
 		printf("effective user ID = %d\n", cred.fc_uid);
 		printf("effective group ID = %d\n", cred.fc_gid);
 		printf("%d supplementary groups:", cred.fc_ngroups - 1);
