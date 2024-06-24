@@ -28,3 +28,6 @@ web:	web.o home_page.o start_connect.o write_get_cmd.o
 
 clean:
 		rm -f ${PROGS} ${CLEANFILES}
+		cd build && rm -f ${PROGS} ${CLEANFILES}
+install:
+		mv ${PROGS} ${CLEANFILES} build/
