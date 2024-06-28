@@ -1,4 +1,4 @@
-#include	"unp.h"
+#include	"../lib/unp.h"
 
 #define	MAXFILES	20
 #define	SERV		"80"	/* port number or service name */
