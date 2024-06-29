@@ -30,3 +30,6 @@ udpcli06:	udpcli06.o dgclibcast6.o
 
 clean:
 		rm -f ${PROGS} ${CLEANFILES}
+		cd build && rm -f ${PROGS} ${CLEANFILES}
+install:
+		mv ${PROGS} ${CLEANFILES} build/
