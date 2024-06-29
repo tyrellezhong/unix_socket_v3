@@ -1,11 +1,13 @@
 /* include get_ifi_info1 */
+#include <net/if.h>
+#include <netinet/in.h>
 #include	"unpifi.h"
 
 struct ifi_info *
 get_ifi_info(int family, int doaliases)
 {
 	struct ifi_info		*ifi, *ifihead, **ifipnext;
-	int					sockfd, len, lastlen, flags, myflags, idx = 0, hlen = 0;
+	volatile int					sockfd, len, lastlen, flags, myflags, idx = 0, hlen = 0;
 	char				*ptr, *buf, lastname[IFNAMSIZ], *cptr, *haddr, *sdlname;
 	struct ifconf		ifc;
 	struct ifreq		*ifr, ifrcopy;
@@ -50,13 +52,15 @@ get_ifi_info(int family, int doaliases)
 			len = sizeof(struct sockaddr_in6);
 			break;
 #endif
-		case AF_INET:	
+		case AF_INET:
+            len = sizeof(struct sockaddr_in);
+            break;	
 		default:	
 			len = sizeof(struct sockaddr);
 			break;
 		}
 #endif	/* HAVE_SOCKADDR_SA_LEN */
-		ptr += sizeof(ifr->ifr_name) + len;	/* for next one in buffer */
+		ptr += sizeof(ifr->ifr_name) + len + 8;	/* for next one in buffer */
 
 #ifdef	HAVE_SOCKADDR_DL_STRUCT
 		/* assumes that AF_LINK precedes AF_INET or AF_INET6 */

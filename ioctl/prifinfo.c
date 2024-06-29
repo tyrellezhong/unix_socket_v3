@@ -1,4 +1,4 @@
-#include	"unpifi.h"
+#include	"../lib/unpifi.h"
 
 int
 main(int argc, char **argv)

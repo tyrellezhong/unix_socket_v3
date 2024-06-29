@@ -1,4 +1,4 @@
-#include	"unpifi.h"
+#include	"../lib/unpifi.h"
 #include	<net/if_arp.h>
 
 int

@@ -8,9 +8,9 @@
             "name": "(gdb) Launch",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/nonblock/build/tcpcli02",
+            "program": "${workspaceFolder}/ioctl/build/prifinfo",
             "stopAtEntry": true,
-            "cwd": "${workspaceFolder}/nonblock/build",
+            "cwd": "${workspaceFolder}/ioctl/build",
             "environment": [],
             "externalConsole": false,
             "MIMode": "gdb",
@@ -27,7 +27,8 @@
                 }
             ],
             "args": [
-                "127.0.0.1",
+                "inet4",
+                "0"
             ],
             
             // "preLaunchTask": "Build",//使用tasks.json中的哪个label生成可执行文件
