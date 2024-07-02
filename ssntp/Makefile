@@ -8,4 +8,7 @@ ssntp:	main.o sntp_proc.o
 		${CC} ${CFLAGS} -o $@ main.o sntp_proc.o ${LIBS} 
 
 clean:
-		rm -f ${PROGS} ${CLEANFILES}
+		rm -f ${PROGS} ${CLEANFILES}\
+		cd build && rm -f ${PROGS} ${CLEANFILES}
+install:
+		mv ${PROGS} ${CLEANFILES} build/

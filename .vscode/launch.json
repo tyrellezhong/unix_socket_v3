@@ -8,9 +8,9 @@
             "name": "(gdb) Launch",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/ioctl/build/prifinfo",
+            "program": "${workspaceFolder}/mcast/build/sendrecv",
             "stopAtEntry": true,
-            "cwd": "${workspaceFolder}/ioctl/build",
+            "cwd": "${workspaceFolder}/mcast/build",
             "environment": [],
             "externalConsole": false,
             "MIMode": "gdb",
@@ -27,8 +27,8 @@
                 }
             ],
             "args": [
-                "inet4",
-                "0"
+                "239.255.1.2",
+                "8888"
             ],
             
             // "preLaunchTask": "Build",//使用tasks.json中的哪个label生成可执行文件

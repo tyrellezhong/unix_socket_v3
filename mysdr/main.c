@@ -1,4 +1,4 @@
-#include	"unp.h"
+#include	"../lib/unp.h"
 
 #define	SAP_NAME	"sap.mcast.net"	/* default group name and port */
 #define	SAP_PORT	"9875"

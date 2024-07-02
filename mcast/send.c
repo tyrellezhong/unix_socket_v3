@@ -1,4 +1,4 @@
-#include	"unp.h"
+#include	"../lib/unp.h"
 #include	<sys/utsname.h>
 
 #define	SENDRATE	5		/* send one datagram every five seconds */
