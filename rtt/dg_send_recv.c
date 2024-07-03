@@ -1,5 +1,5 @@
 /* include dgsendrecv1 */
-#include	"unprtt.h"
+#include	"../lib/unprtt.h"
 #include	<setjmp.h>
 
 #define	RTT_DEBUG

@@ -9,3 +9,6 @@ udpcli01:	udpcli01.o dg_cli.o dg_send_recv.o
 
 clean:
 		rm -f ${PROGS} ${CLEANFILES}
+		cd build && rm -f ${PROGS} ${CLEANFILES}
+install:
+		mv ${PROGS} ${CLEANFILES} build/

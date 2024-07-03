@@ -1,5 +1,5 @@
 /* include udpserv1 */
-#include	"unpifi.h"
+#include	"../lib/unpifi.h"
 
 void	mydg_echo(int, SA *, socklen_t, SA *);
 
@@ -68,7 +68,7 @@ main(int argc, char **argv)
 	bzero(&wildaddr, sizeof(wildaddr));
 	wildaddr.sin_family = AF_INET;
 	wildaddr.sin_addr.s_addr = htonl(INADDR_ANY);
-	wildaddr.sin_port = htons(SERV_PORT);
+	wildaddr.sin_port = htons(SERV_PORT); 
 	Bind(sockfd, (SA *) &wildaddr, sizeof(wildaddr));
 	printf("bound %s\n", Sock_ntop((SA *) &wildaddr, sizeof(wildaddr)));
 

@@ -1,5 +1,5 @@
 /* include recvfrom_flags1 */
-#include	"unp.h"
+#include	"../lib/unp.h"
 #include	<sys/param.h>		/* ALIGN macro for CMSG_NXTHDR() macro */
 
 ssize_t

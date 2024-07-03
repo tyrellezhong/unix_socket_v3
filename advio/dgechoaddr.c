@@ -1,4 +1,4 @@
-#include	"unpifi.h"
+#include	"../lib/unpifi.h"
 
 #undef	MAXLINE
 #define	MAXLINE	20		/* to see datagram truncation */
@@ -35,8 +35,8 @@ dg_echo(int sockfd, SA *pcliaddr, socklen_t clilen)
 			printf(", to %s", Inet_ntop(AF_INET, &pktinfo.ipi_addr,
 										str, sizeof(str)));
 		if (pktinfo.ipi_ifindex > 0)
-			printf(", recv i/f = %s",
-				   If_indextoname(pktinfo.ipi_ifindex, ifname));
+			printf(", recv i/f = %d", pktinfo.ipi_ifindex);
+				//    If_indextoname(pktinfo.ipi_ifindex, ifname));
 #ifdef	MSG_TRUNC
 		if (flags & MSG_TRUNC)	printf(" (datagram truncated)");
 #endif
@@ -51,6 +51,6 @@ dg_echo(int sockfd, SA *pcliaddr, socklen_t clilen)
 #endif
 		printf("\n");
 
-		Sendto(sockfd, mesg, n, 0, pcliaddr, len);
+		 (sockfd, mesg, n, 0, pcliaddr, len);
 	}
 }
