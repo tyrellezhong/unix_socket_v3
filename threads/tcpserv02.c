@@ -1,4 +1,4 @@
-#include	"unpthread.h"
+#include	"../lib/unpthread.h"
 
 static void	*doit(void *);		/* each thread executes this function */
 
@@ -6,7 +6,7 @@ int
 main(int argc, char **argv)
 {
 	int				listenfd, *iptr;
-	thread_t		tid;
+	pthread_t		tid;
 	socklen_t		addrlen, len;
 	struct sockaddr	*cliaddr;
 

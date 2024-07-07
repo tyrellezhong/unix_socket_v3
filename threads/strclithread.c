@@ -1,4 +1,4 @@
-#include	"unpthread.h"
+#include	"../lib/unpthread.h"
 
 void	*copyto(void *);
 
