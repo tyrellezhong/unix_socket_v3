@@ -1,5 +1,5 @@
 /* include serv05a */
-#include	"unp.h"
+#include	"../lib/unp.h"
 #include	"child.h"
 
 static int		nchildren;

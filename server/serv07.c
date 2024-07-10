@@ -1,5 +1,5 @@
 /* include serv07 */
-#include	"unpthread.h"
+#include	"../lib/unpthread.h"
 #include	"pthread07.h"
 
 pthread_mutex_t	mlock = PTHREAD_MUTEX_INITIALIZER;

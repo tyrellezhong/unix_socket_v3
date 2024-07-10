@@ -1,5 +1,5 @@
 /* include serv06 */
-#include	"unpthread.h"
+#include	"../lib/unpthread.h"
 
 int
 main(int argc, char **argv)

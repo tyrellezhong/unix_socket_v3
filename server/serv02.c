@@ -1,5 +1,7 @@
 /* include serv02 */
-#include	"unp.h"
+#include	"../lib/unp.h"
+
+// tcp 预先派生子进程服务器程序，accept无上锁保护
 
 static int		nchildren;
 static pid_t	*pids;

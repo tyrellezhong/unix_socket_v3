@@ -1,6 +1,8 @@
 /* include serv01 */
-#include	"unp.h"
+#include	"../lib/unp.h"
 
+// Tcp并发服务器程序，每个客户一个子进程
+// accept后现场fock
 int
 main(int argc, char **argv)
 {

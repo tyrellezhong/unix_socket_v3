@@ -1,5 +1,5 @@
 /* include serv09 */
-#include	"unpthread.h"
+#include	"../lib/unpthread.h"
 #include	"pthread09.h"
 
 int

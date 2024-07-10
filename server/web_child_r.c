@@ -1,4 +1,4 @@
-#include	"unp.h"
+#include	"../lib/unp.h"
 #include	"readline_r.h"
 
 #define	MAXN	16384		/* max #bytes that a client can request */

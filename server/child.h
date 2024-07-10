@@ -1,3 +1,4 @@
+#include <sys/types.h>
 typedef struct {
   pid_t		child_pid;		/* process ID */
   int		child_pipefd;	/* parent's stream pipe to/from child */

@@ -1,5 +1,5 @@
 /* include serv08 */
-#include	"unpthread.h"
+#include	"../lib/unpthread.h"
 #include	"pthread08.h"
 
 static int			nthreads;
