@@ -1,5 +1,5 @@
 /* include child_make */
-#include	"unp.h"
+#include	"../lib/unp.h"
 #include	"child.h"
 
 pid_t

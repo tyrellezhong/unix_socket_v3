@@ -2,6 +2,9 @@
 #include	"../lib/unpthread.h"
 #include	"pthread08.h"
 
+
+// tcp预先创建线程服务器程序，主线程统一accept
+
 static int			nthreads;
 pthread_mutex_t		clifd_mutex = PTHREAD_MUTEX_INITIALIZER;
 pthread_cond_t		clifd_cond = PTHREAD_COND_INITIALIZER;

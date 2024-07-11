@@ -1,5 +1,5 @@
 /* include my_lock_init */
-#include	"unp.h"
+#include	"../lib/unp.h"
 
 static struct flock	lock_it, unlock_it;
 static int			lock_fd = -1;

@@ -1,6 +1,8 @@
 /* include serv06 */
 #include	"../lib/unpthread.h"
 
+// tcp并发服务器程序，每个客户一个线程
+
 int
 main(int argc, char **argv)
 {

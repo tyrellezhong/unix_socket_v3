@@ -1,8 +1,10 @@
 #include	"../lib/unp.h"
 
+// tcp 预先派生子进程服务器程序，accept使用文件上锁保护
+
 static int		nchildren;
 static pid_t	*pids;
-
+void my_lock_init(char *pathname);
 int
 main(int argc, char **argv)
 {

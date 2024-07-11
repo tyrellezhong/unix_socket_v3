@@ -1,7 +1,7 @@
 /* include serv05a */
 #include	"../lib/unp.h"
 #include	"child.h"
-
+// tcp 预先派生子进程服务器程序，传递描述符
 static int		nchildren;
 
 int

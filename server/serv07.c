@@ -2,6 +2,8 @@
 #include	"../lib/unpthread.h"
 #include	"pthread07.h"
 
+// tcp预先创建线程服务器程序，每个线程各自accept
+
 pthread_mutex_t	mlock = PTHREAD_MUTEX_INITIALIZER;
 
 int
